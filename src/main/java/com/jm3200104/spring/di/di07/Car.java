@@ -1,4 +1,4 @@
-package com.jm3200104.spring.di.di04;
+package com.jm3200104.spring.di.di07;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -7,22 +7,7 @@ import org.springframework.stereotype.Component;
 public class Car {
 
 	private Engine engine;
-	
-	private MusicSystem musicSystem;
-	
-	@Autowired
-	private AirConditioner airConditioner;
 
-	public MusicSystem getMusicSystem() {
-		return musicSystem;
-	}
-
-	@Autowired
-	public void setMusicSystem(MusicSystem musicSystem) {
-		this.musicSystem = musicSystem;
-	}
-
-	// dependency inject - constructor injection
 	@Autowired
 	public Car(Engine engine) {
 		super();
@@ -33,8 +18,6 @@ public class Car {
 
 	public void drive() {
 		engine.start();
-		musicSystem.play();
-		airConditioner.on();
 		System.out.println("Car is being driven...");
 	}
 
