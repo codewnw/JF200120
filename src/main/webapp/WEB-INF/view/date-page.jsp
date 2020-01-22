@@ -7,6 +7,8 @@
 <meta charset="ISO-8859-1">
 <title>Date Page</title>
 </head>
-<body>${date}
+<body>
+<span>Date: </span>
+${date}
 </body>
 </html>
