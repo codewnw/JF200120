@@ -1,4 +1,4 @@
-package com.jm3200104.spring.mvc;
+package com.jm3200104.spring.mvc.controller;
 
 import java.util.Date;
 
@@ -7,16 +7,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
-
-	@GetMapping("/")
-	public String homePage() {
-		return "index";
-	}
+public class DateController {
 
 	@GetMapping("/date")
-	public String showMeDate(Model model) {
-		model.addAttribute("date", new Date());
+	public String showDate(Model model) {
+		Date date = new Date();
+		model.addAttribute("date", date);
 		return "date-page";
 	}
 }
